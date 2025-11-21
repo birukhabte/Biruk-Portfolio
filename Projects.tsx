@@ -107,3 +107,4 @@
 2025-11-01T13:30:33 - Add typing animation for hero text
 2025-11-02T04:13:46 - Create mobile-first responsive design
 2025-11-13T06:46:08 - Create PDF version of resume
+2025-11-21T15:38:56 - Add progress bar for page loading
