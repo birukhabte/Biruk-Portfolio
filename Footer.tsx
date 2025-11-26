@@ -100,3 +100,4 @@
 2025-11-12T04:57:28 - Implement service worker for offline support
 2025-11-21T07:06:19 - Add project images and descriptions
 2025-11-27T08:37:16 - Add final touches and polish
+2025-11-26T18:23:01 - Add print-friendly CSS styles
