@@ -73,3 +73,4 @@
 2025-11-15T21:01:41 - Add TypeScript for better type safety
 2025-11-30T04:52:50 - Create sitemap for better SEO
 2025-11-11T21:53:48 - Create custom hooks for reusable logic
+2025-11-26T03:15:21 - Create PDF version of resume
