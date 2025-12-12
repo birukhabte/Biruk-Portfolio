@@ -7,3 +7,4 @@
 2025-12-15T06:57:30 - Add typing animation for hero text
 2025-12-04T21:19:35 - Set up project structure with components folder
 2025-12-26T07:10:39 - Implement smooth scrolling navigation
+2025-12-12T22:04:22 - Implement scroll-to-top button
