@@ -4,3 +4,4 @@
 2025-12-17T13:46:41 - Add final touches and polish
 2025-12-22T18:58:38 - Create blog section for articles
 2025-12-22T19:18:09 - Implement smooth scrolling navigation
+2025-12-15T06:57:30 - Add typing animation for hero text
