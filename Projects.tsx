@@ -33,3 +33,4 @@
 2025-12-21T09:30:52 - Add animations with Framer Motion
 2025-12-24T08:40:38 - Optimize images for web performance
 2025-12-26T02:39:21 - Set up project structure with components folder
+2025-12-17T00:26:46 - Create blog section for articles
