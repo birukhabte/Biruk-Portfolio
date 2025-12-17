@@ -49,3 +49,4 @@
 2025-12-13T05:47:35 - Add GDPR compliance features
 2025-12-21T14:24:37 - Add animations with Framer Motion
 2025-12-21T07:51:42 - Add smooth reveal animations on scroll
+2025-12-17T18:42:25 - Implement service worker for offline support
