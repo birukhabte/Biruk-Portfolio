@@ -47,3 +47,4 @@
 2025-12-21T07:15:26 - Add meta tags for SEO optimization
 2025-12-04T16:34:06 - Create projects showcase section
 2025-12-13T05:47:35 - Add GDPR compliance features
+2025-12-21T14:24:37 - Add animations with Framer Motion
