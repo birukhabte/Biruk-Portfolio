@@ -50,3 +50,4 @@
 2025-12-21T14:24:37 - Add animations with Framer Motion
 2025-12-21T07:51:42 - Add smooth reveal animations on scroll
 2025-12-17T18:42:25 - Implement service worker for offline support
+2025-12-22T05:27:39 - Create about section with personal story
