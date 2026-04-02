@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
-import livePhoto from '../assets/live photo.png'
-import fitnessPhoto from '../assets/intro.jpg'
+import codeLearnPhoto from '../assets/codelearn.png'
+import addisCampusPhoto from '../assets/addis.png'
 import powerlinkPhoto from '../assets/powerlik profile.png'
-import carRentalPhoto from '../assets/Screenshot from 2026-03-19 17-45-02.png'
+import hospitalPhoto from '../assets/hospitalhome.png'
 
 interface Project {
   id: number
@@ -22,35 +22,35 @@ interface Project {
 const projects: Project[] = [
   {
     id: 9,
-    title: 'Addis-Car Rental Platform ',
+    title: 'Hospital Management System',
     description:
-      'Car Rental Booking System is a full-stack MERN web app for renting cars online. Users can browse cars, view details, and create bookings with JWT-based login. Admins can add cars, manage inventory, and oversee bookings with image uploads via ImageKit. The frontend runs on React/Vite and the backend on Node/Express with MongoDB.',
-    image: carRentalPhoto,
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js/Express' ,'MongoDB'],
-    github: 'https://github.com/birukhabte/Et-cars',
-    live: 'https://etcars-nine.vercel.app/',
+      'Hospital Management System is a full-stack MERN web app for managing hospital operations. Users can schedule appointments, view medical records, and manage patient information with JWT-based authentication. Admins can manage staff, oversee patient records, and handle appointments with secure data storage. The frontend runs on React/Vite and the backend on Node/Express with MongoDB.',
+    image: hospitalPhoto,
+    tech: ['React', 'PostgreSQL/Supabase', 'Node.js/Express', 'Bootstrap', 'jQuery'],
+    github: 'https://github.com/birukhabte/Hospital-mgmt-system.git',
+    live: 'https://hospital-management-system-mklg.onrender.com/',
     category: 'fullstack'
   },
   {
     id: 1,
-    title: 'Teen Magazine',
+    title: 'Learn Coding',
     description:
-      'A full stack website for a digital magazine',
-    image: livePhoto,
-    tech: ['Svelte', 'Supabase', 'Github-actions'],
-    github: 'https://github.com/birukhabte/teen-magazin.git',
-    live: 'https://teen-ethiopia.vercel.app/',
+      'An interactive learning platform designed to help users build coding skills through structured lessons and hands-on practice.',
+    image: codeLearnPhoto,
+    tech: ['Next.js', 'React', 'TypeScript', 'Firebase'],
+    github: 'https://github.com/birukhabte/learn-coding.git',
+    live: 'https://learn-coding-sand.vercel.app',
     category: 'fullstack',
   },
   {
     id: 4,
-    title: 'Fitness E-commerce site',
+    title: 'AddisCampus',
     description:
-      'fitness e-commerce web application built using Next.js 13, focused on selling fitness-related products such as gym equipment, supplements, and workout accessories. It demonstrates modern full-stack development practices with scalable architecture and optimized performance.',
-    image: fitnessPhoto,
-    tech: ['Next.js', 'TypeScript', 'MongoDb', 'Tailwind CSS'],
-    github: 'https://github.com/birukhabte/Gym_ecommerce.git',
-    live: 'https://nextjs-ecommerce-typescript.vercel.app/',
+      'CampusSync is a comprehensive campus community platform that helps students connect and collaborate. It includes: Lost & Found, Marketplace, AI Notes, AI Interview Practice, Real-time Chat, and User Profiles.',
+    image: addisCampusPhoto,
+    tech: ['React', 'Node.js/Express', 'MongoDB', 'AI content generation', 'Firebase'],
+    github: 'https://github.com/birukhabte/AddisSync.git',
+    live: 'https://addissync.vercel.app/',
     category: 'fullstack',
   },
 

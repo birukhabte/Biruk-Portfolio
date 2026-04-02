@@ -96,7 +96,7 @@ const About = () => {
                 >
                   https://t.me/Ethio_Coders_channel
                 </a>
-                with 4.5K+ members, where I share frontend and backend programming tools, best practices, and career guidance for students and junior developers. Strong believer in collaboration, continuous learning, and building impactful software.
+                with 5K+ members, where I share frontend and backend programming tools, best practices, and career guidance for students and junior developers. Strong believer in collaboration, continuous learning, and building impactful software.
               </p>
             </motion.div>
           </div>
