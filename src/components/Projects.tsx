@@ -1,18 +1,22 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { useRef, useState, useEffect } from 'react'
+import { FiGithub, FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import codeLearnPhoto from '../assets/codelearn.png'
 import addisCampusPhoto from '../assets/addis.png'
 import powerlinkPhoto from '../assets/powerlik profile.png'
 import hospitalPhoto from '../assets/hospitalhome.png'
+import pharmacareLogin from '../assets/project image/login.png'
+import pharmacareDashboard from '../assets/project image/dashboard.png'
+import pharmacareInventory from '../assets/project image/inventory.png'
+import pharmacareSales from '../assets/project image/sales.png'
 
 interface Project {
   id: number
   title: string
   description: string
-  image: string
+  image: string | string[]
   tech: string[]
   github: string
   live: string
@@ -20,6 +24,17 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 10,
+    title: 'PharmaCare - Pharmacy Management System',
+    description:
+      'A full-stack web application designed to manage pharmacy operations. It handles medicine inventory, sales tracking, customer management, prescriptions, supplier management, and provides analytics through a dashboard with real-time metrics. Key features include: Medicine inventory management with batch tracking and expiry alerts, Sales and purchase order processing, Customer and supplier management, Prescription handling, Role-based access control (Head Pharmacist, Counter Staff, Inventory Manager), Dashboard with sales trends, top medicines, and KPIs, Audit logging and notifications.',
+    image: [pharmacareLogin, pharmacareDashboard, pharmacareInventory, pharmacareSales],
+    tech: ['Next.js 14', 'React 19', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'Vercel', 'Render'],
+    github: 'https://github.com/birukhabte/pharma_Care.git',
+    live: 'https://pharmacare-one.vercel.app/',
+    category: 'fullstack'
+  },
   {
     id: 9,
     title: 'Hospital Management System',
@@ -73,6 +88,39 @@ const Projects = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [expandedIds, setExpandedIds] = useState<Set<number>>(new Set())
+  const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: number]: number }>({})
+
+  // Auto-rotate images for projects with multiple images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => {
+        const next = { ...prev }
+        projects.forEach((project) => {
+          if (Array.isArray(project.image)) {
+            const currentIndex = next[project.id] || 0
+            next[project.id] = (currentIndex + 1) % project.image.length
+          }
+        })
+        return next
+      })
+    }, 3000) // Change image every 3 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const handlePrevImage = (projectId: number, imageCount: number) => {
+    setCurrentImageIndex((prev) => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) - 1 + imageCount) % imageCount,
+    }))
+  }
+
+  const handleNextImage = (projectId: number, imageCount: number) => {
+    setCurrentImageIndex((prev) => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) + 1) % imageCount,
+    }))
+  }
 
   const toggleDescription = (id: number) => {
     setExpandedIds((prev) => {
@@ -140,11 +188,57 @@ const Projects = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
+                  {Array.isArray(project.image) ? (
+                    <>
+                      <img
+                        src={project.image[currentImageIndex[project.id] || 0]}
+                        alt={`${project.title} - Image ${(currentImageIndex[project.id] || 0) + 1}`}
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                      />
+                      {/* Image Navigation Arrows */}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          handlePrevImage(project.id, project.image.length)
+                        }}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-gray-900/80 rounded-full text-white hover:bg-primary-500 transition-colors z-10"
+                      >
+                        <FiChevronLeft size={20} />
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          handleNextImage(project.id, project.image.length)
+                        }}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gray-900/80 rounded-full text-white hover:bg-primary-500 transition-colors z-10"
+                      >
+                        <FiChevronRight size={20} />
+                      </button>
+                      {/* Image Indicators */}
+                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                        {project.image.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              setCurrentImageIndex((prev) => ({ ...prev, [project.id]: idx }))
+                            }}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                              (currentImageIndex[project.id] || 0) === idx
+                                ? 'bg-primary-400 w-6'
+                                : 'bg-gray-400'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute bottom-4 left-4 right-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     <motion.a
