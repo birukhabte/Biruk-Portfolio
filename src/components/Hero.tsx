@@ -64,8 +64,8 @@ const Hero = () => {
   const handleDownloadCV = () => {
     // Download the resume from public folder
     const link = document.createElement('a')
-    link.href = '/Biruk_Habte_Resume_.pdf'
-    link.download = 'Biruk_Habte_Resume_.pdf'
+    link.href = '/Biruk_Habte_RESUME.pdf'
+    link.download = 'Biruk_Habte_RESUME.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
