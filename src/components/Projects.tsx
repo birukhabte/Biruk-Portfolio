@@ -36,15 +36,15 @@ const projects: Project[] = [
     category: 'fullstack'
   },
   {
-    id: 9,
-    title: 'Hospital Management System',
+    id: 4,
+    title: 'AddisCampus',
     description:
-      'Hospital Management System is a full-stack MERN web app for managing hospital operations. Users can schedule appointments, view medical records, and manage patient information with JWT-based authentication. Admins can manage staff, oversee patient records, and handle appointments with secure data storage. The frontend runs on React/Vite and the backend on Node/Express with MongoDB.',
-    image: hospitalPhoto,
-    tech: ['React', 'PostgreSQL/Supabase', 'Node.js/Express', 'Bootstrap', 'jQuery'],
-    github: 'https://github.com/birukhabte/Hospital-mgmt-system.git',
-    live: 'https://hospital-management-system-mklg.onrender.com/',
-    category: 'fullstack'
+      'CampusSync is a comprehensive campus community platform that helps students connect and collaborate. It includes: Lost & Found, Marketplace, AI Notes, AI Interview Practice, Real-time Chat, and User Profiles.',
+    image: addisCampusPhoto,
+    tech: ['React', 'Node.js/Express', 'MongoDB', 'AI content generation', 'Firebase'],
+    github: 'https://github.com/birukhabte/AddisSync.git',
+    live: 'https://addissync.vercel.app/',
+    category: 'fullstack',
   },
   {
     id: 1,
@@ -58,15 +58,15 @@ const projects: Project[] = [
     category: 'fullstack',
   },
   {
-    id: 4,
-    title: 'AddisCampus',
+    id: 9,
+    title: 'Hospital Management System',
     description:
-      'CampusSync is a comprehensive campus community platform that helps students connect and collaborate. It includes: Lost & Found, Marketplace, AI Notes, AI Interview Practice, Real-time Chat, and User Profiles.',
-    image: addisCampusPhoto,
-    tech: ['React', 'Node.js/Express', 'MongoDB', 'AI content generation', 'Firebase'],
-    github: 'https://github.com/birukhabte/AddisSync.git',
-    live: 'https://addissync.vercel.app/',
-    category: 'fullstack',
+      'Hospital Management System is a full-stack MERN web app for managing hospital operations. Users can schedule appointments, view medical records, and manage patient information with JWT-based authentication. Admins can manage staff, oversee patient records, and handle appointments with secure data storage. The frontend runs on React/Vite and the backend on Node/Express with MongoDB.',
+    image: hospitalPhoto,
+    tech: ['React', 'PostgreSQL/Supabase', 'Node.js/Express', 'Bootstrap', 'jQuery'],
+    github: 'https://github.com/birukhabte/Hospital-mgmt-system.git',
+    live: 'https://hospital-management-system-mklg.onrender.com/',
+    category: 'fullstack'
   },
 
   {
