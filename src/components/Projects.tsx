@@ -7,6 +7,7 @@ import codeLearnPhoto from '../assets/codelearn.png'
 import addisCampusPhoto from '../assets/addis.png'
 import powerlinkPhoto from '../assets/powerlik profile.png'
 import hospitalPhoto from '../assets/hospitalhome.png'
+import musicPlayerPhoto from '../assets/music-player.png'
 import pharmacareLogin from '../assets/project image/login.png'
 import pharmacareDashboard from '../assets/project image/dashboard.png'
 import pharmacareInventory from '../assets/project image/inventory.png'
@@ -24,6 +25,17 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 8,
+    title: 'Flutter Music Player',
+    description:
+      'A mobile music player app that plays MP3 files with comprehensive music management features. The app includes standard playback controls (play, pause, skip, seek), playlist management, song sharing, lyrics search, and even music identification from background audio. It supports both light and dark themes and is available on the Google Play Store.',
+    image: musicPlayerPhoto,
+    tech: ['Flutter', 'Dart', 'Deezer API', 'AzLyrics/AbsoluteLyrics', 'ACRCloud', 'Hive'],
+    github: 'https://github.com/birukhabte/Flutter-music-player.git',
+    live: 'https://play.google.com/store/apps/details?id=com.onuifeanyi.vybeplayer',
+    category: 'fullstack',
+  },
   {
     id: 10,
     title: 'PharmaCare - Pharmacy Management System',
