@@ -12,6 +12,9 @@ import pharmacareLogin from '../assets/project image/login.png'
 import pharmacareDashboard from '../assets/project image/dashboard.png'
 import pharmacareInventory from '../assets/project image/inventory.png'
 import pharmacareSales from '../assets/project image/sales.png'
+import fur1 from '../assets/project image/fur1.png'
+import fur2 from '../assets/project image/fur2.png'
+import fur3 from '../assets/project image/fur3.png'
 
 interface Project {
   id: number
@@ -48,6 +51,17 @@ const projects: Project[] = [
     category: 'fullstack'
   },
   {
+    id: 11,
+    title: 'Home Luxury Furniture',
+    description:
+      'Home Luxury Furniture is an e-commerce platform for selling luxury furniture online. Customers can browse products (Arabian Majlis, sofas, TV stands), add items to their cart, and complete purchases using Chapa payment gateway. The system includes an admin panel for managing products, orders, promotions, and customer inquiries.',
+    image: [fur1, fur2, fur3],
+    tech: ['React', 'TypeScript', 'NestJS', 'MongoDB', 'Docker & Docker Compose'],
+    github: 'https://github.com/birukhabte/home-luxury',
+    live: 'https://home-luxury.vercel.app/',
+    category: 'fullstack'
+  },
+  {
     id: 4,
     title: 'AddisCampus',
     description:
@@ -68,17 +82,6 @@ const projects: Project[] = [
     github: 'https://github.com/birukhabte/learn-coding.git',
     live: 'https://learn-coding-sand.vercel.app',
     category: 'fullstack',
-  },
-  {
-    id: 9,
-    title: 'Hospital Management System',
-    description:
-      'Hospital Management System is a full-stack MERN web app for managing hospital operations. Users can schedule appointments, view medical records, and manage patient information with JWT-based authentication. Admins can manage staff, oversee patient records, and handle appointments with secure data storage. The frontend runs on React/Vite and the backend on Node/Express with MongoDB.',
-    image: hospitalPhoto,
-    tech: ['React', 'PostgreSQL/Supabase', 'Node.js/Express', 'Bootstrap', 'jQuery'],
-    github: 'https://github.com/birukhabte/Hospital-mgmt-system.git',
-    live: 'https://hospital-management-system-mklg.onrender.com/',
-    category: 'fullstack'
   },
 
   {
