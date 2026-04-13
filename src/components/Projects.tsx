@@ -6,7 +6,6 @@ import { FiGithub, FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-i
 import codeLearnPhoto from '../assets/codelearn.png'
 import addisCampusPhoto from '../assets/addis.png'
 import powerlinkPhoto from '../assets/powerlik profile.png'
-import hospitalPhoto from '../assets/hospitalhome.png'
 import musicPlayerPhoto from '../assets/music-player.png'
 import pharmacareLogin from '../assets/project image/login.png'
 import pharmacareDashboard from '../assets/project image/dashboard.png'
